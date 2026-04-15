@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to the Registration Form</h1>
+            <p>Please fill in the below details to get started:</p>
+            <p>Today is: {{ day_of_week }}</p>
+            <p>Time is: {{ current_time }}</p>
+        </div>
+        <div class="registrationform">
+            <form method="POST" action="/submit">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder ="Enter your name"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 20px;
+            }
+            .container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+            }
+            .registrationform {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            input[type="text"], input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+
+    </body>
+</html>
