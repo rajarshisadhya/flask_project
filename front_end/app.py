@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from datetime import datetime
 import requests
 
-BACKEND_URL = 'http://localhost:9000'
+BACKEND_URL = 'https://flaskproject-production-bf6c.up.railway.app'
 
 app = Flask(__name__)
 
