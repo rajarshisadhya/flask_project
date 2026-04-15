@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 import requests
 
-BACKEND_URL = 'https://flaskproject-production-bf6c.up.railway.app'
+BACKEND_URL = 'flaskproject-production-bf6c.up.railway.app'
 
 app = Flask(__name__)
 
@@ -29,6 +29,3 @@ def submit():
     except requests.exceptions.JSONDecodeError:
         return jsonify({"error": "Backend returned invalid JSON", "raw": response.text}), 502
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8000))
-    app.run(host='0.0.0.0', port=port, debug=False)
