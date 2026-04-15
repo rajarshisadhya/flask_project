@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from datetime import datetime
+import os
 import requests
 
 BACKEND_URL = 'https://flaskproject-production-bf6c.up.railway.app'
@@ -29,4 +30,5 @@ def submit():
         return jsonify({"error": "Backend returned invalid JSON", "raw": response.text}), 502
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port, debug=False)
